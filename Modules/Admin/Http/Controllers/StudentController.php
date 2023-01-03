@@ -17,9 +17,9 @@ class StudentController extends Controller
     {
         if(request('search')) {
             $students = Student::where('name', 'LIKE', '%'.request('search').'%')
-                                ->orWhere('phone', 'LIKE', '%'.request('search').'%')->paginate(10);
+                                ->orWhere('phone', 'LIKE', '%'.request('search').'%')->simplePaginate(10);
         } else {
-            $students = Student::paginate(10);
+            $students = Student::simplePaginate(10);
         }
         // $students = Student::get();
 

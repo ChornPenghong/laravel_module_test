@@ -1,7 +1,12 @@
 @extends('admin::layouts.master')
+@section('page-title')
+    <h2>Students</h2>
+@endsection
+@section('right-title')
+    <h2><a href="{{ route('students') }}">Back</a> /Create</h2>
+@endsection
 @section('content')
-    <div class="container mt-4">
-        <div class="col-md-8">
+    <div class=" mt-4">
             <div class="card">
                 <div class="card-header">
                     <h3>Add Student</h3>
@@ -16,8 +21,8 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="gender" class="col-sm-2 col-form-label">Gender</label>
-                            <select id="gender" class="form-control col-sm-10" name="gender">
+                            <label for="gender" class="col-sm-2">Gender</label>
+                            <select id="gender" class="form-control col-md-10" name="gender">
                               <option value="null">Select an option</option>
                               <option value="male">Male</option>
                               <option value="male">Female</option>
@@ -38,5 +43,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection
